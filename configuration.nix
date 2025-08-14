@@ -70,6 +70,7 @@
     wget
     git
     ghostty
+    home-manager
   ];
 
   programs.hyprland.enable = true;
