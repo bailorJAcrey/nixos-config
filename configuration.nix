@@ -56,6 +56,7 @@
   users.users.bailor= {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.fish;
     packages = with pkgs; [
       tree
     ];
@@ -74,6 +75,7 @@
   ];
 
   programs.hyprland.enable = true;
+  programs.fish.enable = true;
 
   # temporary options set while developing this configuration in a vm
   virtualisation.virtualbox.guest.enable = true;
