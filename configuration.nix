@@ -36,6 +36,12 @@
   ];
 
   hardware.graphics.enable = true;
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+  };
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -47,6 +53,10 @@
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+  };
+  services = {
+    blueman.enable = true;
+    fprintd.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
