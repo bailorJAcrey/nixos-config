@@ -85,6 +85,7 @@
     git
     ghostty
     home-manager
+    lazygit
   ];
 
   programs.hyprland.enable = true;
