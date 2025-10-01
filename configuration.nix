@@ -57,6 +57,12 @@
   services = {
     blueman.enable = true;
     fprintd.enable = true;
+    upower.enable = true;
+    logind = {
+        enable = true;
+        extraConfig = ''
+        '';
+    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
