@@ -57,7 +57,13 @@
   services = {
     blueman.enable = true;
     fprintd.enable = true;
+    upower.enable = true;
+    auto-cpufreq.enable = true;
+    #logind.extraConfig = ''
+    #  HandleLidSwitch=suspend
+    #'';
   };
+  powerManagement.cpuFreqGovernor = "powersave";
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
@@ -86,6 +92,7 @@
     ghostty
     home-manager
     lazygit
+    auto-cpufreq
   ];
 
   programs.hyprland.enable = true;
