@@ -68,7 +68,7 @@
   };
   users.users.bailor= {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       tree
