@@ -92,6 +92,7 @@
     ghostty
     home-manager
     lazygit
+    fzf
     auto-cpufreq
   ];
 
