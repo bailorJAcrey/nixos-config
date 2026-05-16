@@ -11,6 +11,7 @@
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
   boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.efiSysMountPoint = "/boot/efi";
@@ -72,7 +73,7 @@
   users.users.root = {
     shell = pkgs.fish;
   };
-  users.users.bailor= {
+  users.users.bailor = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.fish;
@@ -98,6 +99,7 @@
 
   programs.hyprland.enable = true;
   programs.fish.enable = true;
+  programs.steam.enable = true;
 
   # temporary options set while developing this configuration in a vm
 
