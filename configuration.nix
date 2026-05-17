@@ -60,9 +60,11 @@
     fprintd.enable = true;
     upower.enable = true;
     auto-cpufreq.enable = true;
-    #logind.extraConfig = ''
-    #  HandleLidSwitch=suspend
-    #'';
+    logind = {
+        enable = true;
+        extraConfig = ''
+        '';
+    };
   };
   powerManagement.cpuFreqGovernor = "powersave";
 
